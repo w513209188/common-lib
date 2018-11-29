@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <GridLayout
+        android:id="@+id/gridlayout_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="-4.5dp"
+        android:paddingRight="-4.5dp"
+        >
+        <com.wngbo.www.common_postphoto.widget.SquareImage
+            android:id="@+id/sq1"
+            android:layout_width="0dp"
+            android:layout_margin="4dp"
+            android:scaleType="centerCrop"
+            tools:src="@android:color/black" />
+        <com.wngbo.www.common_postphoto.widget.SquareImage
+            android:id="@+id/sq2"
+            android:layout_width="0dp"
+            android:layout_margin="4dp"
+            android:scaleType="centerCrop"
+            tools:src="@android:color/black" />
+
+        <com.wngbo.www.common_postphoto.widget.SquareImage
+            android:id="@+id/sq3"
+            android:layout_width="0dp"
+            android:layout_margin="4dp"
+            android:scaleType="centerCrop"
+            tools:src="@android:color/black"/>
+    </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

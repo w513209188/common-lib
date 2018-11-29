@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="www.wangbo.common_lib">
+
+    <!-- Required -->
+    <permission
+        android:name="www.wangbo.common_lib.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="www.wangbo.common_lib.permission.JPUSH_MESSAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name=".mApp"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--<activity-->
+            <!--android:name="com.tencent.smtt.sdk.VideoActivity"-->
+            <!--android:alwaysRetainTaskState="true"-->
+            <!--android:configChanges="orientation|screenSize|keyboardHidden"-->
+            <!--android:exported="false"-->
+            <!--android:launchMode="singleTask">-->
+
+            <!--<intent-filter>-->
+                <!--<action android:name="com.tencent.smtt.tbs.video.PLAY"/>-->
+                <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--&lt;!&ndash; Required SDK 核心功能&ndash;&gt;-->
+        <!--&lt;!&ndash; 可配置 android:process 参数将 PushService 放在其他进程中 &ndash;&gt;-->
+        <!--<service-->
+            <!--android:name="cn.jpush.android.service.PushService"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="false" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="cn.jpush.android.intent.REGISTER" />-->
+                <!--<action android:name="cn.jpush.android.intent.REPORT" />-->
+                <!--<action android:name="cn.jpush.android.intent.PushService" />-->
+                <!--<action android:name="cn.jpush.android.intent.PUSH_TIME" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
+
+        <!--&lt;!&ndash; since 3.0.9 Required SDK 核心功能&ndash;&gt;-->
+        <!--<provider-->
+            <!--android:authorities="www.wangbo.common_lib.DataProvider"-->
+            <!--android:name="cn.jpush.android.service.DataProvider"-->
+            <!--android:exported="true"-->
+            <!--/>-->
+
+        <!--&lt;!&ndash; since 1.8.0 option 可选项。用于同一设备中不同应用的 JPush 服务相互拉起的功能。 &ndash;&gt;-->
+        <!--&lt;!&ndash; 若不启用该功能可删除该组件，或把 enabled 设置成 false ；拉起服务被关闭，App 不会通过拉起服务拉起其他的 App，也不会被其他 App 拉起。 &ndash;&gt;-->
+        <!--<service-->
+            <!--android:name="cn.jpush.android.service.DaemonService"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="true">-->
+            <!--<intent-filter >-->
+                <!--<action android:name="cn.jpush.android.intent.DaemonService" />-->
+                <!--<category android:name="www.wangbo.common_lib"/>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
+        <!--&lt;!&ndash; since 3.1.0 Required SDK 核心功能&ndash;&gt;-->
+        <!--<provider-->
+            <!--android:authorities="www.wangbo.common_lib.DownloadProvider"-->
+            <!--android:name="cn.jpush.android.service.DownloadProvider"-->
+            <!--android:exported="true"-->
+            <!--/>-->
+
+        <!--&lt;!&ndash; Required SDK 核心功能&ndash;&gt;-->
+        <!--<receiver-->
+            <!--android:name="cn.jpush.android.service.PushReceiver"-->
+            <!--android:enabled="true" >-->
+            <!--<intent-filter android:priority="1000">-->
+                <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />-->
+                <!--<category android:name="www.wangbo.common_lib"/>-->
+            <!--</intent-filter>-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.USER_PRESENT" />-->
+                <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+            <!--</intent-filter>-->
+            <!--&lt;!&ndash; Optional &ndash;&gt;-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.PACKAGE_ADDED" />-->
+                <!--<action android:name="android.intent.action.PACKAGE_REMOVED" />-->
+                <!--<data android:scheme="package" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--&lt;!&ndash; Required SDK 核心功能&ndash;&gt;-->
+        <!--<activity-->
+            <!--android:name="cn.jpush.android.ui.PushActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar"-->
+            <!--android:exported="false" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="cn.jpush.android.ui.PushActivity" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+                <!--<category android:name="www.wangbo.common_lib" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--&lt;!&ndash; SDK 核心功能&ndash;&gt;-->
+        <!--<activity-->
+            <!--android:name="cn.jpush.android.ui.PopWinActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden"-->
+            <!--android:exported="false"-->
+            <!--android:theme="@style/MyDialogStyle">-->
+            <!--<intent-filter>-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+                <!--<category android:name="www.wangbo.common_lib" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!--&lt;!&ndash; Required SDK 核心功能&ndash;&gt;-->
+        <!--<service-->
+            <!--android:name="cn.jpush.android.service.DownloadService"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="false" >-->
+        <!--</service>-->
+
+        <!--&lt;!&ndash; Required SDK 核心功能&ndash;&gt;-->
+        <!--<receiver android:name="cn.jpush.android.service.AlarmReceiver" />-->
+
+        <!--&lt;!&ndash; Required since 3.0.7 &ndash;&gt;-->
+        <!--&lt;!&ndash; 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 &ndash;&gt;-->
+        <!--&lt;!&ndash; 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter &ndash;&gt;-->
+        <!--<receiver-->
+            <!--android:name="com.wb.jpush.receiver.MyJPushMessageReceiver"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="false" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />-->
+                <!--<category android:name="www.wangbo.common_lib" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--&lt;!&ndash; User defined. 用户自定义的广播接收器&ndash;&gt;-->
+        <!--<receiver-->
+            <!--android:name="com.wb.jpush.receiver.MyJpushReceiver"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="false">-->
+            <!--<intent-filter>-->
+                <!--&lt;!&ndash;Required 用户注册 SDK 的 intent&ndash;&gt;-->
+                <!--<action android:name="cn.jpush.android.intent.REGISTRATION" />-->
+                <!--&lt;!&ndash;Required 用户接收 SDK 消息的 intent&ndash;&gt;-->
+                <!--<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />-->
+                <!--&lt;!&ndash;Required 用户接收 SDK 通知栏信息的 intent&ndash;&gt;-->
+                <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />-->
+                <!--&lt;!&ndash;Required 用户打开自定义通知栏的 intent&ndash;&gt;-->
+                <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />-->
+                <!--&lt;!&ndash; 接收网络变化 连接/断开 since 1.6.3 &ndash;&gt;-->
+                <!--<action android:name="cn.jpush.android.intent.CONNECTION" />-->
+                <!--<category android:name="www.wangbo.common_lib" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--&lt;!&ndash; Required. For publish channel feature &ndash;&gt;-->
+        <!--&lt;!&ndash; JPUSH_CHANNEL 是为了方便开发者统计 APK 分发渠道。&ndash;&gt;-->
+        <!--&lt;!&ndash; 例如: &ndash;&gt;-->
+        <!--&lt;!&ndash; 发到 Google Play 的 APK 可以设置为 google-play; &ndash;&gt;-->
+        <!--&lt;!&ndash; 发到其他市场的 APK 可以设置为 xxx-market。 &ndash;&gt;-->
+        <!--&lt;!&ndash; Required. AppKey copied from Portal &ndash;&gt;-->
+        <!--<meta-data android:name="JPUSH_APPKEY" android:value="74f97cb024d05d80a7c7f851"/>-->
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+    </application>
+
+</manifest>
