@@ -47,6 +47,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ISNav.getInstance().init(new ImageLoader() {
+            @Override
+            public void displayImage(Context context, String s, ImageView imageView) {
+                GlideManager.getInstance().setCommonPhoto(imageView,R.drawable.back,context,s,true);
+            }
+        });
         course_wb=this.findViewById(R.id.webView);
+        course_wb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ISListConfig isListConfig=new ISListConfig.Builder().multiSelect(false).build();
+                ISNav.getInstance().toListActivity(MainActivity.this,isListConfig,222);
+            }
+        });
     }
 }
