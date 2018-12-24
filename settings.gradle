@@ -1,1 +1,1 @@
-include ':app', ':common-lib' , ':common-jpush', ':common_rxbus', ':common-refresh-header', ':common-refresh-layout', ':common_postphoto'
+include ':app', ':common-lib' , ':common-jpush', ':common_rxbus', ':common-refresh-header', ':common-refresh-layout'

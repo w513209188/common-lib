@@ -208,6 +208,6 @@ dependencies {
     compile project(':common-jpush')
     compile project(':common-refresh-header')
     compile project(':common-refresh-layout')
-    compile project(':common_postphoto')
+//    compile project(':common_postphoto')
     compile project(':common_rxbus')
 }

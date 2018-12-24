@@ -76,6 +76,8 @@ deps.lottie="com.airbnb.android:lottie:2.1.0"
 deps.ariaCore="com.arialyy.aria:aria-core:3.4.16"
 deps.rxlifecycle="com.trello.rxlifecycle2:rxlifecycle-components:$versions.rxlifecycle"
 deps.rxlifecyclenavi="com.trello.rxlifecycle2:rxlifecycle-navi:$versions.rxlifecycle"
+
+deps.commonLib= "com.github.w513209188:common-lib:v1.0.1"
 ext.deps = deps
 
 def build_versions = [:]

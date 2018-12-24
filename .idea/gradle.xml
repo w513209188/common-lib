@@ -3,9 +3,8 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="F:\as\gradle\gradle-4.4" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -14,7 +13,6 @@
             <option value="$PROJECT_DIR$/common-lib" />
             <option value="$PROJECT_DIR$/common-refresh-header" />
             <option value="$PROJECT_DIR$/common-refresh-layout" />
-            <option value="$PROJECT_DIR$/common_postphoto" />
             <option value="$PROJECT_DIR$/common_rxbus" />
           </set>
         </option>
