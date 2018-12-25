@@ -5,6 +5,7 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
+import com.wb.baselib.appconfig.AppConfigManager;
 import com.wb.baselib.bean.Result;
 
 import java.io.ByteArrayInputStream;
@@ -28,8 +29,7 @@ public class MyGsonResponseBodyConverter<T> implements Converter<ResponseBody, T
     public T convert(ResponseBody value) throws IOException {
         String response = value.string();
         Result baseInfo = mGson.fromJson(response, Result.class);
-        if (baseInfo.getStatus() != ApiErrorCode.SUCCUSE_CLIENT) {
-            Log.e("不成立","---->>");
+        if (baseInfo.getStatus() != AppConfigManager.newInstance().getAppConfig().getHttpCodeSuccess()) {
             value.close();
             throw new ApiException(baseInfo.getStatus(), baseInfo.getMsg());
         }
