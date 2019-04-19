@@ -17,6 +17,7 @@ import java.util.TimerTask;
 
 /**
  *         注意把该类的onCreate()onDestroy()和activity的onCreate()onDestroy()同步处理
+ *         获取验证码控件
  */
 @SuppressLint("AppCompatCustomView")
 public class TimeButton extends TextView implements OnClickListener {

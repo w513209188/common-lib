@@ -11,18 +11,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 1.屏蔽切换的时候需要经过中间页
  */
 public class CustViewPager extends ViewPager {
-    private boolean enabled=true;//false;//默认不可滑动
-
-
+    private boolean enabled=true;//false;//默认可滑动
     public CustViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
         //this.enabled = true;
-
     }
-
+    @Override
+    public void setCurrentItem(int item) {
+        super.setCurrentItem(item,false);//false表示切换的时候,不经过两个页面的中间页
+    }
+    @Override
+    public void setCurrentItem(int item, boolean smoothScroll) {
+        super.setCurrentItem(item, smoothScroll);
+    }
     //触摸没有反应就可以了
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -57,7 +60,6 @@ public class CustViewPager extends ViewPager {
     @SuppressLint("UseSparseArrays")
     private Map<Integer, Integer> map = new HashMap<Integer, Integer>();
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-
         for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
             child.measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));

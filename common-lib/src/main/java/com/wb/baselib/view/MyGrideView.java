@@ -4,6 +4,9 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.GridView;
 
+/**
+ * 自定义gridview
+ */
 public class MyGrideView extends GridView {
     public MyGrideView(Context context) {
         super(context);

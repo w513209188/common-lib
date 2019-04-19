@@ -6,6 +6,7 @@ import android.widget.ListView;
 
 /**
  * Created by Administrator on 2018/1/24.
+ * 自定义listview
  */
 
 public class MyListView extends ListView{

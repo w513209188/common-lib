@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by baiiu on 15/11/25.
+ *
  * 简单的通用util
  */
 public class CommonUtil {

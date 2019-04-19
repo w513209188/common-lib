@@ -13,19 +13,22 @@ import com.wb.baselib.R;
 import com.wb.baselib.adapter.ViewPageAdapter;
 import com.wb.baselib.base.fragment.BaseFragment;
 import com.wb.baselib.jptabbar.OnTabSelectListener;
+import com.wb.baselib.jptabbar.animate.AnimationType;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 自定义导航栏
+ */
 public class BottomBarView extends LinearLayout {
     private View mView;
     private JPTabBar bottomNavigationBar;
     private List<BaseFragment> mFragments;
-    private MyViewPager mViewPager;
+    private CustViewPager mViewPager;
     public BottomBarView(Context context) {
         this(context,null);
     }
-
     public BottomBarView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs,0);
     }
@@ -47,7 +50,6 @@ public class BottomBarView extends LinearLayout {
     public BottomBarView setFragments(List<BaseFragment> fragment){
         mFragments=new ArrayList<>();
         mFragments.addAll(fragment);
-
         return this;
     }
 
@@ -93,6 +95,26 @@ public class BottomBarView extends LinearLayout {
         return this;
     }
 
+    /**
+     * 设置底部导航背景颜色
+     * @param colorId
+     * @return
+     */
+    public BottomBarView setBottomBackGround(int colorId){
+        bottomNavigationBar.setBackgroundColor(colorId);
+        return this;
+    }
+
+    /**
+     * 设置底部导航选择后是否动画
+     * @param animateType
+     * @return
+     */
+    public BottomBarView setTabAnimate(int animateType){
+        AnimationType AnimateType=AnimationType.values()[animateType];
+        bottomNavigationBar.setAnimation(AnimateType);
+        return this;
+    }
     /**
      * 绑定数据
      * @param fragmentManager

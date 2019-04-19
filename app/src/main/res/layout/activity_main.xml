@@ -5,10 +5,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:text="请求"
-        android:id="@+id/webView"
+    <com.wb.baselib.view.SlidingTabLayout
+        xmlns:tl="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/stl_home_tabs"
+        android:background="#ffcc22"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white" />
+        android:layout_height="40dp"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home_pages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

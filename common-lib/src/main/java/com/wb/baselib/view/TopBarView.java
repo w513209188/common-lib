@@ -27,6 +27,9 @@ import com.wb.baselib.R;
 import com.wb.baselib.app.AppUtils;
 import com.wb.baselib.phone.PhoneUtils;
 
+/**
+ * 标题栏
+ */
 @SuppressWarnings("ResourceType")
 public class TopBarView extends RelativeLayout implements View.OnClickListener {
     private View viewStatusBarFill;                     // 状态栏填充视图
