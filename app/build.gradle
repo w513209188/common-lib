@@ -23,6 +23,7 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':common-lib')
+//    implementation  'com.github.w513209188:common-lib:v1.0.6'
 //    implementation files('libs/tbs_sdk_thirdapp_v3.5.0.jar')
 
 }
