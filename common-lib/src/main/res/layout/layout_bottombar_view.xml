@@ -26,7 +26,6 @@
             android:layout_height="56dp"
             android:background="#fff"
             jp:TabTextSize="12sp"
-            jp:TabAnimate="Jump"
             jp:TabGradientEnable="true"
             />
     </RelativeLayout>

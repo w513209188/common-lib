@@ -81,7 +81,7 @@ public class AppConfig {
             this.maxPage=bulider.maxPage;
         }
         if(bulider.httpCodeSuccess==0){
-            this.httpCodeSuccess=200;
+            this.httpCodeSuccess=0;
         }else {
             this.httpCodeSuccess=bulider.httpCodeSuccess;
         }
