@@ -15,6 +15,7 @@
             android:layout_above="@+id/opop" />
         <View
             android:id="@+id/opop"
+            android:background="@color/grey_hex_ee"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_above="@+id/tabbar" />
@@ -26,6 +27,7 @@
             android:layout_height="56dp"
             android:background="#fff"
             jp:TabTextSize="12sp"
+            jp:TabAnimate="None"
             jp:TabGradientEnable="true"
             />
     </RelativeLayout>

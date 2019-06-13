@@ -55,7 +55,7 @@ dependencies {
     compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1'
     compile 'com.trello.rxlifecycle2:rxlifecycle-navi:2.0.1'
     compile 'top.zibin:Luban:1.1.8'
-    compile 'me.jessyan:autosize:0.9.5'
+    compile 'me.jessyan:autosize:1.1.2'
     compile project(':common-jpush')
     compile project(':common-refresh-header')
     compile project(':common-refresh-layout')
