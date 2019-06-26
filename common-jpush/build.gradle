@@ -20,11 +20,11 @@ android {
 }
 
 dependencies {
-//    implementation fileTree(include: ['*.jar'], dir: 'libs')
-//    implementation 'com.android.support:appcompat-v7:27.1.1'
-//    testImplementation 'junit:junit:4.12'
-//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //    implementation 'com.android.support:appcompat-v7:27.1.1'
+    //    testImplementation 'junit:junit:4.12'
+    //    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    //    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     api fileTree(include: ['*.jar'], dir: 'libs')
     api deps.support.app_compat
     api files('libs/jcore-android-1.2.6.jar')
@@ -37,4 +37,13 @@ dependencies {
     api files('libs/jshare-jchatpro-android-1.6.1.jar')
     api files('libs/jshare-facebook-android-1.6.1.jar')
     api files('libs/jshare-android-1.6.1.jar')
+    implementation files('libs/jcore-android-2.1.0.jar')
+    implementation files('libs/jpush-android-3.1.7.jar')
+    implementation files('libs/jshare-android-1.7.1.jar')
+    implementation files('libs/jshare-facebook-android-1.7.1.jar')
+    implementation files('libs/jshare-jchatpro-android-1.7.1.jar')
+    implementation files('libs/jshare-qq-android-1.7.1.jar')
+    implementation files('libs/jshare-sina-android-1.7.1.jar')
+    implementation files('libs/jshare-twitter-android-1.7.1.jar')
+    implementation files('libs/jshare-wechat-android-1.7.1.jar')
 }

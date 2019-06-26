@@ -42,7 +42,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cn.jiguang.share.android.api.ShareParams;
 import io.reactivex.disposables.Disposable;
+import cn.jiguang.share.android.api.Platform;
 import www.wangbo.common_lib.R;
 
 public class MainActivity extends BaseActivity {
@@ -64,6 +66,21 @@ public class MainActivity extends BaseActivity {
         mPagerAdapter=new ViewPageAdapter(getSupportFragmentManager(),baseFragments,strings);
         mViewPager.setAdapter(mPagerAdapter);
         mSlidingTabLayout.setViewPager(mViewPager);
+
+
+//        ShareParams shareParams = new ShareParams();
+//        shareParams.setShareType(Platform.SHARE_MINI_PROGRAM);
+//        shareParams.setTitle(share_title);
+//        shareParams.setText(share_text);
+//        shareParams.setUrl(share_url);//用于微信低版本兼容，当微信客户端为低版本时，小程序分享变网页分享
+//        shareParams.setImagePath(file.getAbsolutePath());
+//        shareParams.setMiniProgramWithShareTicket(false);//
+//        shareParams.setMiniProgramType(0);// 正式版:0，开发版（测试版）:1，体验版（预览版）:2
+//        shareParams.setMiniProgramImagePath(file.getAbsolutePath());//小程序图片地址
+//        shareParams.setMiniProgramPath("pages/index/index");//小程序页面路径
+//        shareParams.setMiniProgramUserName("gh_cd370c00d3d4");//小程序原始id
+
+
     }
 
     @Override
